@@ -1,0 +1,32 @@
+$fontColor: #333
+$bgColor: #400
+$secondFontColor: #000
+
+// rozszerzanie klas
+.no-margin-padding
+  margin: 0
+  padding: 0
+
+=container($maxWidth: 1200px, $margin: 0 auto)
+  max-width: $maxWidth
+  width: 100%
+  margin: $margin
+
+header 
+  +container()
+  nav 
+    ul 
+      @extend .no-margin-padding
+      padding: 10px
+      
+      li 
+        display: inline-block
+        
+        a 
+          color: $secondFontColor
+          
+          &:hover
+            color: $fontColor
+            
+main
+  +container(900px, 50px auto)
